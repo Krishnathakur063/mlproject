@@ -1,0 +1,45 @@
+1:- Creating Virtual Environment in Anaconda
+	Command:- conda create -p <Environment Name> python==<python version(3.11)>
+
+2:- Activating  the Virtual Environment
+	Command:- 1:- conda init
+		  2:-  conda activate venv/
+
+3:- Creating GitHub Repository
+	1:- First Create Readme.md in VS Code
+	2:- echo "# mlproject" >> README.md
+		echo "# mlproject" >> README.md
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git branch -M main
+		git remote add origin https://github.com/Krishnathakur063/mlproject.git
+		git push -u origin main
+
+4:- Creating '.gitignore' file to protect from pushing venv file into github repository	
+	1:- Choose .gitignore template --> Select Python --> Then Click on Commit  Changes.
+	2:- git pull origin main --> This command will download .gitignore file in your main folder in your local system.
+
+5:- Create 'requirements.txt' and then type the package into it which you want to use. We can also mention  the
+	version name in requirements.txt with package name  like 'numpy 1.6'
+    
+	To Install 'requirements.txt' type below command:-
+		Command:- pip install -r requirements.txt
+
+6:- Creating 'setup.py' 
+	Importance of 'setup.py' :- setup.py is required if we want to create our project as a package so we
+	can push our project to PyPI. We also need to mention all the project related details  in 'setup.py' file.
+
+7:- Create 'src' folder then create '__init__.py' file into it.
+
+8:- To Run 'setup.py' file type below command:-
+	Command:- python setup.py install
+
+    Alternatively,
+		Then type '-e .' in requirements.txt --> This '-e .' when we run requirements.txt then -e will see the
+	'setup.py' file automatically.
+	Now type below command to install setyp.py with the help of requirements.txt
+	==> Command:- pip install -r requirements.txt
+
+
+
